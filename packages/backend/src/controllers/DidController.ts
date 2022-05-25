@@ -23,8 +23,8 @@ export class GetProfileController {
   @Post("/register/:did")
   @Summary("Register the given DID as a Disco user")
   async registerDid(@PathParams("did") did: string): Promise<boolean> {
-    console.log("@TODO: Implement me using this.DidService");
-    // mildly confused, the only change that seems necessary is returning the result.
+    // console.log("@TODO: Implement me using this.DidService");
+    // mildly confused about the TODO; the only change that seems necessary is returning the result.
     const wasSuccessful = await this.DidService.registerDid(did);
     return wasSuccessful;
   }
@@ -48,10 +48,6 @@ export class GetProfileController {
 
     return profiles;
   }
-
-  // keeping for test
-  // console.log("@TODO: Using stub implementation with hard-coded profile fetch. Implement me!");
-  // const profile = await getProfileFromCeramic("did:3:kjzl6cwe1jw148uyox3goiyrwwe3aab8vatm3apxqisd351ww0dj6v5e3f61e8b");
 
 }
 

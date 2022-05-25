@@ -14,12 +14,6 @@ export const ProfilesList: React.FC = (props) => {
       updateDids(await api.getAllDids());
     })()
   }, []);
-  // @NOTE: Example api usage:
-  // console.log(await api.getProfileViaDid("did:3:kjzl6cwe1jw148uyox3goiyrwwe3aab8vatm3apxqisd351ww0dj6v5e3f61e8b"));
-
-  // throw new Error(
-  //   "@TODO: Please implement me using ApiService and ProfileView or ProfileLoader! This component should display all of the profiles one after the other.",
-  // );
 
   if (dids === "LOADING") {
     return (
@@ -29,7 +23,7 @@ export const ProfilesList: React.FC = (props) => {
     );
   }
 
-  // for some reason, dids is empty
+  // For some reason, dids is empty.  Fixing this issue feels out of scope for this test.
   // console.log(dids);
   return (
     <Box>
